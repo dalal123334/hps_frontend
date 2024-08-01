@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.transaction-section, .report-section {
+  margin: 30px 0; /* Same margin for both components */
+  padding: 70px; /* Same padding for both components */
+  border: 1px solid rgb(140, 140, 50);
+  border-radius: 8px;
+  background-color: #e87020;
+  width: 80%; /* Same width for both components */
+  max-width: 1200px; /* Same max-width for both components */
+  margin-left: auto; /* Center the components horizontally */
+  margin-right: auto; /* Center the components horizontally */
+}
+
+.transaction-section h1, .report-section h1 {
+  font-size: 20px; /* Same font size for headers in both components */
+  margin-bottom: 15px; /* Same bottom margin for spacing */
+}
+
+.transaction-section h2, .report-section h2 {
+  font-size: 20px; /* Same font size for subheaders in both components */
+  color: #f6f1f1;
+}
+
+.icon-plus {
+  width: 50px; /* Same size for icons */
+  margin-top: 15px; /* Same top margin for spacing */
+}
+

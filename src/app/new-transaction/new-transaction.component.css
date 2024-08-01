@@ -1,0 +1,68 @@
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+/* New-transaction specific styles */
+.new-transaction {
+  display: block;
+  width: 80%;  /* Réduit la largeur à 80% de son conteneur */
+  max-width: 400px;  /* Limite la largeur maximale */
+  margin: 20px auto;  /* Centre le composant et garde la marge verticale */
+  padding: 15px;  /* Ajoute un peu d'espace intérieur */
+  background-color: #87CEEB;  /* Changez la couleur de fond ici (par exemple, bleu clair) */
+  border-radius: 8px;  /* Arrondit les coins */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Ajoute une ombre légère */
+}
+
+.new-transaction h1 {
+  font-size: 20px;  /* Réduit légèrement la taille du titre */
+  margin-bottom: 15px;  /* Ajoute un espacement sous le titre */
+}
+
+.new-transaction h2 {
+  font-size: 16px;  /* Réduit légèrement la taille du sous-titre */
+  margin-bottom: 10px;  /* Ajoute un espacement sous le sous-titre */
+}
+
+.new-transaction img {
+  max-width: 100%;  /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+  height: auto;  /* Maintient le ratio de l'image */
+  margin-top: 10px;
+}
+
+/* Ajout de styles pour les éléments de formulaire si présents */
+.new-transaction input,
+.new-transaction select,
+.new-transaction button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.new-transaction button {
+  background-color: #54351e;  /* Couleur de fond du bouton */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.new-transaction button:hover {
+  background-color: #432818;  /* Couleur de fond du bouton au survol */
+}

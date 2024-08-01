@@ -1,0 +1,48 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.transaction-section, .report-section {
+  margin: 30px 0; /* Même marge pour les deux composants */
+  padding: 70px; /* Même padding pour les deux composants */
+  border: 1px solid rgb(241, 235, 231);
+  border-radius: 8px;
+  background-color: #e87020;
+  width: 80%; /* Même largeur pour les deux composants */
+  max-width: 1200px; /* Même largeur maximale pour les deux composants */
+  margin-left: auto; /* Centrer les composants horizontalement */
+  margin-right: auto; /* Centrer les composants horizontalement */
+}
+
+.transaction-section h1, .report-section h1 {
+  font-size: 20px; /* Taille de police pour les titres */
+  margin-bottom: 10px; /* Espace entre le titre et le sous-titre */
+}
+
+.transaction-section h2, .report-section h2 {
+  font-size: 20px; /* Taille de police pour les sous-titres */
+  color: #f6f1f1;
+  margin-bottom: 20px; /* Espace entre le sous-titre et l'icône */
+}
+
+.icon-container {
+  text-align: center; /* Centrer l'icône horizontalement */
+}
+
+.icon-plus {
+  width: 50px; /* Taille de l'icône */
+  display: inline-block; /* Assurer le centrage dans le conteneur */
+}
