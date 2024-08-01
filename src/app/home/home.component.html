@@ -1,0 +1,18 @@
+<div class="container">
+  <img src="assets/hps.png" alt="HPS Logo" class="logo"/>
+
+  <div class="transaction-section" (click)="click()">
+    <h1>New Transaction Process</h1>
+    <h2>Initiate a new transaction process</h2>
+    <img src="assets/plus.png" alt="Plus Icon" class="icon-plus">
+    <button [routerLink]="['/new-page']">Go to New Page</button>
+  </div>
+
+  <div class="report-section" (click)="click1()" >
+    <h1>Transaction & Report</h1>
+    <h2>Explorez et générez votre rapport</h2>
+    <div class="icon-container">
+      <img src="assets/calendrier.png" alt="Icône de rapport" class="icon-plus">
+    </div>
+  </div>
+</div>

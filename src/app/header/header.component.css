@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.orange-container {
+  background-color: orange;
+  padding: 20px;
+  cursor: pointer;
+}
