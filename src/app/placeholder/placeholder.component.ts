@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-placeholder',
   standalone: true,
   imports: [],
-  template: '<div>This is an empty page</div>',
+  templateUrl:'./placeholder.component.html',
   styleUrl: './placeholder.component.css'
 })
 export class PlaceholderComponent {
