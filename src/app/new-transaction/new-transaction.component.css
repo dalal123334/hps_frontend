@@ -66,3 +66,10 @@ body, html {
 .new-transaction button:hover {
   background-color: #432818;  /* Couleur de fond du bouton au survol */
 }
+mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+  margin-top: 16px;
+}

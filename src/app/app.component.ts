@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 import {HeaderComponent} from "./header/header.component";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -11,4 +13,5 @@ import {HeaderComponent} from "./header/header.component";
 })
 export class AppComponent {
   title = 'frontPrj';
+
 }
