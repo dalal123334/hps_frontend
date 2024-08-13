@@ -1,0 +1,101 @@
+<div class="form-container">
+  <!-- Premier Formulaire -->
+  <form [formGroup]="transactionForm1" (ngSubmit)="onSubmit1()">
+    <h2 class="form-title">Acceptor Information </h2>
+
+    <div>
+      <label for="acceptorBusinessCode1">Acceptor Business Code</label>
+      <input id="acceptorBusinessCode1" type="text" formControlName="acceptorBusinessCode" required>
+      <div *ngIf="transactionForm1.get('acceptorBusinessCode')?.invalid && transactionForm1.get('acceptorBusinessCode')?.touched" class="error-message">
+        Ce champ doit contenir entre 5 et 10 caractères alphanumériques.
+      </div>
+    </div>
+
+    <div>
+      <label for="acceptorTerminalId1">Acceptor Terminal ID</label>
+      <input id="acceptorTerminalId1" type="text" formControlName="acceptorTerminalId" required>
+      <div *ngIf="transactionForm1.get('acceptorTerminalId')?.invalid && transactionForm1.get('acceptorTerminalId')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="acceptorIdCode1">Acceptor ID Code</label>
+      <input id="acceptorIdCode1" type="text" formControlName="acceptorIdCode" required>
+      <div *ngIf="transactionForm1.get('acceptorIdCode')?.invalid && transactionForm1.get('acceptorIdCode')?.touched"class="error-message">
+        Ce champ doit contenir au moins 6 caractères.
+      </div>
+    </div>
+
+    <div>
+      <label for="acceptorNameLocation1">Acceptor Name & Location</label>
+      <input id="acceptorNameLocation1" type="text" formControlName="acceptorNameLocation" required>
+      <div *ngIf="transactionForm1.get('acceptorNameLocation')?.invalid && transactionForm1.get('acceptorNameLocation')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="acceptorStreetAddress1">Acceptor Street Address</label>
+      <input id="acceptorStreetAddress1" type="text" formControlName="acceptorStreetAddress" required>
+      <div *ngIf="transactionForm1.get('acceptorStreetAddress')?.invalid && transactionForm1.get('acceptorStreetAddress')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="acceptorCity1">Acceptor City</label>
+      <select id="acceptorCity1" formControlName="acceptorCity" required>
+        <option value="">Select a city</option>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </select>
+      <div *ngIf="transactionForm1.get('acceptorCity')?.invalid && transactionForm1.get('acceptorCity')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+
+  </form>
+</div>
+
+<!-- Second Formulaire -->
+<div class="form-container">
+  <form [formGroup]="transactionForm2" (ngSubmit)="onSubmit2()">
+    <h2 class="form-title">Reconciliation Information</h2>
+
+    <div>
+      <label for="amountReconciliation">Amount Reconciliation</label>
+      <input id="amountReconciliation" type="text" formControlName="amountReconciliation" required>
+      <div *ngIf="transactionForm2.get('amountReconciliation')?.invalid && transactionForm2.get('amountReconciliation')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="currencyCodeReconciliation">Currency Code Reconciliation</label>
+      <input id="currencyCodeReconciliation" type="text" formControlName="currencyCodeReconciliation" required>
+      <div *ngIf="transactionForm2.get('currencyCodeReconciliation')?.invalid && transactionForm2.get('currencyCodeReconciliation')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="amountsAdditional">Additional Amounts</label>
+      <input id="amountsAdditional" type="text" formControlName="amountsAdditional" required>
+      <div *ngIf="transactionForm2.get('amountsAdditional')?.invalid && transactionForm2.get('amountsAdditional')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <div>
+      <label for="settlementInformation">Settlement Information</label>
+      <input id="settlementInformation" type="text" formControlName="settlementInformation" required>
+      <div *ngIf="transactionForm2.get('settlementInformation')?.invalid && transactionForm2.get('settlementInformation')?.touched" class="error-message">
+        Ce champ est requis.
+      </div>
+    </div>
+
+    <button (click)="testClick()">Next</button>
+
+  </form>
+</div>

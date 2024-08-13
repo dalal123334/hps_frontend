@@ -1,0 +1,227 @@
+<!-- Additional Data Form -->
+<div class="form-container">
+  <h2>Additional Data Information</h2>
+  <form [formGroup]="additionalDataForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="mastercardMappingServiceAccountNumber">Mastercard Mapping Service Account Number (p0001):</label>
+      <input
+        type="text"
+        id="mastercardMappingServiceAccountNumber"
+        formControlName="mastercardMappingServiceAccountNumber"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('mastercardMappingServiceAccountNumber')?.invalid && (additionalDataForm.get('mastercardMappingServiceAccountNumber')?.dirty || additionalDataForm.get('mastercardMappingServiceAccountNumber')?.touched)" class="error-message">
+        Mastercard Mapping Service Account Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gcmsProductIdentifier">GCMS Product Identifier (p0002):</label>
+      <input
+        type="text"
+        id="gcmsProductIdentifier"
+        formControlName="gcmsProductIdentifier"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('gcmsProductIdentifier')?.invalid && (additionalDataForm.get('gcmsProductIdentifier')?.dirty || additionalDataForm.get('gcmsProductIdentifier')?.touched)" class="error-message">
+        GCMS Product Identifier is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="licensedProductIdentifier">Licensed Product Identifier (p0003):</label>
+      <input
+        type="text"
+        id="licensedProductIdentifier"
+        formControlName="licensedProductIdentifier"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('licensedProductIdentifier')?.invalid && (additionalDataForm.get('licensedProductIdentifier')?.dirty || additionalDataForm.get('licensedProductIdentifier')?.touched)" class="error-message">
+        Licensed Product Identifier is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fundingAccountInformation">Funding Account Information (p0004):</label>
+      <input
+        type="text"
+        id="fundingAccountInformation"
+        formControlName="fundingAccountInformation"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('fundingAccountInformation')?.invalid && (additionalDataForm.get('fundingAccountInformation')?.dirty || additionalDataForm.get('fundingAccountInformation')?.touched)" class="error-message">
+        Funding Account Information is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="messageErrorIndicator">Message Error Indicator (p0005):</label>
+      <input
+        type="text"
+        id="messageErrorIndicator"
+        formControlName="messageErrorIndicator"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('messageErrorIndicator')?.invalid && (additionalDataForm.get('messageErrorIndicator')?.dirty || additionalDataForm.get('messageErrorIndicator')?.touched)" class="error-message">
+        Message Error Indicator is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="digitalAccountReferenceNumber">Digital Account Reference Number (p0014):</label>
+      <input
+        type="text"
+        id="digitalAccountReferenceNumber"
+        formControlName="digitalAccountReferenceNumber"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('digitalAccountReferenceNumber')?.invalid && (additionalDataForm.get('digitalAccountReferenceNumber')?.dirty || additionalDataForm.get('digitalAccountReferenceNumber')?.touched)" class="error-message">
+        Digital Account Reference Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="clearingCurrencyConversionIdentifier">Clearing Currency Conversion Identifier (p0015):</label>
+      <input
+        type="text"
+        id="clearingCurrencyConversionIdentifier"
+        formControlName="clearingCurrencyConversionIdentifier"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('clearingCurrencyConversionIdentifier')?.invalid && (additionalDataForm.get('clearingCurrencyConversionIdentifier')?.dirty || additionalDataForm.get('clearingCurrencyConversionIdentifier')?.touched)" class="error-message">
+        Clearing Currency Conversion Identifier is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionIntegrityClass">Transaction Integrity Class (p0017):</label>
+      <input
+        type="text"
+        id="transactionIntegrityClass"
+        formControlName="transactionIntegrityClass"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('transactionIntegrityClass')?.invalid && (additionalDataForm.get('transactionIntegrityClass')?.dirty || additionalDataForm.get('transactionIntegrityClass')?.touched)" class="error-message">
+        Transaction Integrity Class is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="acceptanceData">Acceptance Data (p0018):</label>
+      <input
+        type="text"
+        id="acceptanceData"
+        formControlName="acceptanceData"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('acceptanceData')?.invalid && (additionalDataForm.get('acceptanceData')?.dirty || additionalDataForm.get('acceptanceData')?.touched)" class="error-message">
+        Acceptance Data is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="digitalCommerceSolutionsIndicators">Digital Commerce Solutions Indicators (p0020):</label>
+      <input
+        type="text"
+        id="digitalCommerceSolutionsIndicators"
+        formControlName="digitalCommerceSolutionsIndicators"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('digitalCommerceSolutionsIndicators')?.invalid && (additionalDataForm.get('digitalCommerceSolutionsIndicators')?.dirty || additionalDataForm.get('digitalCommerceSolutionsIndicators')?.touched)" class="error-message">
+        Digital Commerce Solutions Indicators are required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionTypeIndicator">Transaction Type Indicator (p0021):</label>
+      <input
+        type="text"
+        id="transactionTypeIndicator"
+        formControlName="transactionTypeIndicator"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('transactionTypeIndicator')?.invalid && (additionalDataForm.get('transactionTypeIndicator')?.dirty || additionalDataForm.get('transactionTypeIndicator')?.touched)" class="error-message">
+        Transaction Type Indicator is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="additionalTerminalOperatingEnvironments">Additional Terminal Operating Environments (p0022):</label>
+      <input
+        type="text"
+        id="additionalTerminalOperatingEnvironments"
+        formControlName="additionalTerminalOperatingEnvironments"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('additionalTerminalOperatingEnvironments')?.invalid && (additionalDataForm.get('additionalTerminalOperatingEnvironments')?.dirty || additionalDataForm.get('additionalTerminalOperatingEnvironments')?.touched)" class="error-message">
+        Additional Terminal Operating Environments are required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="terminalType">Terminal Type (p0023):</label>
+      <input
+        type="text"
+        id="terminalType"
+        formControlName="terminalType"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('terminalType')?.invalid && (additionalDataForm.get('terminalType')?.dirty || additionalDataForm.get('terminalType')?.touched)" class="error-message">
+        Terminal Type is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="messageReversalIndicator">Message Reversal Indicator (p0025):</label>
+      <input
+        type="text"
+        id="messageReversalIndicator"
+        formControlName="messageReversalIndicator"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('messageReversalIndicator')?.invalid && (additionalDataForm.get('messageReversalIndicator')?.dirty || additionalDataForm.get('messageReversalIndicator')?.touched)" class="error-message">
+        Message Reversal Indicator is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="flexCode">Flex Code (p0027):</label>
+      <input
+        type="text"
+        id="flexCode"
+        formControlName="flexCode"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('flexCode')?.invalid && (additionalDataForm.get('flexCode')?.dirty || additionalDataForm.get('flexCode')?.touched)" class="error-message">
+        Flex Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mpqrReceivingAccountNumber">MPQR Receiving Account Number (p0028):</label>
+      <input
+        type="text"
+        id="mpqrReceivingAccountNumber"
+        formControlName="mpqrReceivingAccountNumber"
+        required
+      >
+      <div *ngIf="additionalDataForm.get('mpqrReceivingAccountNumber')?.invalid && (additionalDataForm.get('mpqrReceivingAccountNumber')?.dirty || additionalDataForm.get('mpqrReceivingAccountNumber')?.touched)" class="error-message">
+        MPQR Receiving Account Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="programAccountType">Program Account Type (p0029):</label>
+      <input
+        type="text"
+        id="programAccountType"
+        formControlName="programAccountType"
+      >
+      <div *ngIf="additionalDataForm.get('programAccountType')?.invalid && (additionalDataForm.get('programAccountType')?.dirty || additionalDataForm.get('programAccountType')?.touched)" class="error-message">
+        Program Account Type is required.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="additionalDataForm.invalid">Submit</button>
+  </form>
+</div>

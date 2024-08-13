@@ -17,7 +17,7 @@ export class HomeComponent {
 
 
   click(){
-    this.router.navigate(['/new-transaction']).catch(err => console.error(err));
+    this.router.navigate(['/multi-step-form']).catch(err => console.error(err));
   }
   click1(){
     this.router.navigate(['/transaction-report']).catch(err => console.error(err));

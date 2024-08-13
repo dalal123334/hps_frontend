@@ -1,14 +1,19 @@
 import {Routes} from '@angular/router';
-import {PlaceholderComponent} from "./placeholder/placeholder.component";
 import {HomeComponent} from "./home/home.component";
-import {NewTransactionComponent} from "./new-transaction/new-transaction.component";
-import {TransactionReportComponent} from "./transaction-report/transaction-report.component"; // Utiliser un composant temporaire
+
+import {TransactionReportComponent} from "./transaction-report/transaction-report.component";
+import {MultiStepFormComponent} from "./multi-step-form/multi-step-form.component";
+import { AccountInstitutionInfoComponent } from './account-institution-info/account-institution-info.component';
+import {TransactionInfoComponent} from "./transaction-info/transaction-info.component";
+import {AdditionalDataComponent} from "./additional-data/additional-data.component";
 
 
 export const routes: Routes = [
-  {path: 'new-transaction', component: NewTransactionComponent},
+  {path: 'additional-data', component: AdditionalDataComponent },
+  {path: 'transaction-info', component: TransactionInfoComponent },
+  {path: 'account-institution-info', component: AccountInstitutionInfoComponent },
   {path: 'transaction-report', component: TransactionReportComponent},
+  {path: 'multi-step-form', component: MultiStepFormComponent },
   {path: 'home', component: HomeComponent},
-  {path: 'new-page', component: PlaceholderComponent}, // Route temporaire
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];

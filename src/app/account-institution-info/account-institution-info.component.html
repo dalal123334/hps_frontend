@@ -1,0 +1,117 @@
+<!-- Account Institution Information Form -->
+<div class="form-container">
+  <h2>Account Institution Information</h2>
+  <form [formGroup]="accountInstitutionForm" >
+    <div class="form-group">
+      <label for="acquiringInstitutionIdCode">Acquiring Institution ID Code:</label>
+      <input
+        type="text"
+        id="acquiringInstitutionIdCode"
+        formControlName="acquiringInstitutionIdCode"
+        required
+      >
+      <div *ngIf="accountInstitutionForm.get('acquiringInstitutionIdCode')?.invalid && (accountInstitutionForm.get('acquiringInstitutionIdCode')?.dirty || accountInstitutionForm.get('acquiringInstitutionIdCode')?.touched)" class="error-message">
+        Acquiring Institution ID Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="forwardingInstitutionIdCode">Forwarding Institution ID Code:</label>
+      <input
+        type="text"
+        id="forwardingInstitutionIdCode"
+        formControlName="forwardingInstitutionIdCode"
+        required
+      >
+      <div *ngIf="accountInstitutionForm.get('forwardingInstitutionIdCode')?.invalid && (accountInstitutionForm.get('forwardingInstitutionIdCode')?.dirty || accountInstitutionForm.get('forwardingInstitutionIdCode')?.touched)" class="error-message">
+        Forwarding Institution ID Code is required.
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Currency Conversion Form -->
+<div class="form-container">
+  <h2>Currency Conversion Information</h2>
+  <form [formGroup]="currencyConversionForm" >
+    <div class="form-group">
+      <label for="conversionRateReconciliation">Conversion Rate Reconciliation:</label>
+      <input
+        type="text"
+        id="conversionRateReconciliation"
+        formControlName="conversionRateReconciliation"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('conversionRateReconciliation')?.invalid && (currencyConversionForm.get('conversionRateReconciliation')?.dirty || currencyConversionForm.get('conversionRateReconciliation')?.touched)" class="error-message">
+        Conversion Rate Reconciliation is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="conversionRateCardholderBilling">Conversion Rate Cardholder Billing:</label>
+      <input
+        type="text"
+        id="conversionRateCardholderBilling"
+        formControlName="conversionRateCardholderBilling"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('conversionRateCardholderBilling')?.invalid && (currencyConversionForm.get('conversionRateCardholderBilling')?.dirty || currencyConversionForm.get('conversionRateCardholderBilling')?.touched)" class="error-message">
+        Conversion Rate Cardholder Billing is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="currencyConversionDate">Currency Conversion Date:</label>
+      <input
+        type="date"
+        id="currencyConversionDate"
+        formControlName="currencyConversionDate"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('currencyConversionDate')?.invalid && (currencyConversionForm.get('currencyConversionDate')?.dirty || currencyConversionForm.get('currencyConversionDate')?.touched)" class="error-message">
+        Currency Conversion Date is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="currencyConversionIndicator">Currency Conversion Indicator:</label>
+      <input
+        type="text"
+        id="currencyConversionIndicator"
+        formControlName="currencyConversionIndicator"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('currencyConversionIndicator')?.invalid && (currencyConversionForm.get('currencyConversionIndicator')?.dirty || currencyConversionForm.get('currencyConversionIndicator')?.touched)" class="error-message">
+        Currency Conversion Indicator is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="amountCardholderBillingUSD">Amount Cardholder Billing (USD):</label>
+      <input
+        type="text"
+        id="amountCardholderBillingUSD"
+        formControlName="amountCardholderBillingUSD"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('amountCardholderBillingUSD')?.invalid && (currencyConversionForm.get('amountCardholderBillingUSD')?.dirty || currencyConversionForm.get('amountCardholderBillingUSD')?.touched)" class="error-message">
+        Amount Cardholder Billing (USD) is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="amountCurrencyConversionAssessmentUSD">Amount Currency Conversion Assessment (USD):</label>
+      <input
+        type="text"
+        id="amountCurrencyConversionAssessmentUSD"
+        formControlName="amountCurrencyConversionAssessmentUSD"
+        required
+      >
+      <div *ngIf="currencyConversionForm.get('amountCurrencyConversionAssessmentUSD')?.invalid && (currencyConversionForm.get('amountCurrencyConversionAssessmentUSD')?.dirty || currencyConversionForm.get('amountCurrencyConversionAssessmentUSD')?.touched)" class="error-message">
+        Amount Currency Conversion Assessment (USD) is required.
+      </div>
+    </div>
+
+    <button (click)="testClick()">Next</button>
+  </form>
+</div>

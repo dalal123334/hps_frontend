@@ -1,0 +1,278 @@
+<!-- Transaction Info Form -->
+<div class="form-container">
+  <h2>Transaction Information</h2>
+  <form [formGroup]="transactionInfoForm" (ngSubmit)="onSubmitTransactionInfo()">
+
+    <div class="form-group">
+      <label for="primaryAccountNumber">Primary Account Number (PAN):</label>
+      <input
+        type="text"
+        id="primaryAccountNumber"
+        formControlName="primaryAccountNumber"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('primaryAccountNumber')?.invalid && (transactionInfoForm.get('primaryAccountNumber')?.dirty || transactionInfoForm.get('primaryAccountNumber')?.touched)" class="error-message">
+        Primary Account Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="processingCode">Processing Code:</label>
+      <input
+        type="text"
+        id="processingCode"
+        formControlName="processingCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('processingCode')?.invalid && (transactionInfoForm.get('processingCode')?.dirty || transactionInfoForm.get('processingCode')?.touched)" class="error-message">
+        Processing Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="amountTransaction">Amount, Transaction:</label>
+      <input
+        type="number"
+        id="amountTransaction"
+        formControlName="amountTransaction"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('amountTransaction')?.invalid && (transactionInfoForm.get('amountTransaction')?.dirty || transactionInfoForm.get('amountTransaction')?.touched)" class="error-message">
+        Amount, Transaction is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="localTransactionDateTime">Date and Time, Local Transaction:</label>
+      <input
+        type="datetime-local"
+        id="localTransactionDateTime"
+        formControlName="localTransactionDateTime"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('localTransactionDateTime')?.invalid && (transactionInfoForm.get('localTransactionDateTime')?.dirty || transactionInfoForm.get('localTransactionDateTime')?.touched)" class="error-message">
+        Local Transaction Date and Time is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="expirationDate">Date, Expiration:</label>
+      <input
+        type="date"
+        id="expirationDate"
+        formControlName="expirationDate"
+      >
+      <div *ngIf="transactionInfoForm.get('expirationDate')?.invalid && (transactionInfoForm.get('expirationDate')?.dirty || transactionInfoForm.get('expirationDate')?.touched)" class="error-message">
+        Expiration Date is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="pointOfServiceDataCode">Point of Service Data Code:</label>
+      <input
+        type="text"
+        id="pointOfServiceDataCode"
+        formControlName="pointOfServiceDataCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('pointOfServiceDataCode')?.invalid && (transactionInfoForm.get('pointOfServiceDataCode')?.dirty || transactionInfoForm.get('pointOfServiceDataCode')?.touched)" class="error-message">
+        Point of Service Data Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="cardSequenceNumber">Card Sequence Number:</label>
+      <input
+        type="text"
+        id="cardSequenceNumber"
+        formControlName="cardSequenceNumber"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('cardSequenceNumber')?.invalid && (transactionInfoForm.get('cardSequenceNumber')?.dirty || transactionInfoForm.get('cardSequenceNumber')?.touched)" class="error-message">
+        Card Sequence Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="functionCode">Function Code:</label>
+      <input
+        type="text"
+        id="functionCode"
+        formControlName="functionCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('functionCode')?.invalid && (transactionInfoForm.get('functionCode')?.dirty || transactionInfoForm.get('functionCode')?.touched)" class="error-message">
+        Function Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="messageReasonCode">Message Reason Code:</label>
+      <input
+        type="text"
+        id="messageReasonCode"
+        formControlName="messageReasonCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('messageReasonCode')?.invalid && (transactionInfoForm.get('messageReasonCode')?.dirty || transactionInfoForm.get('messageReasonCode')?.touched)" class="error-message">
+        Message Reason Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="amountsOriginal">Amounts, Original:</label>
+      <input
+        type="number"
+        id="amountsOriginal"
+        formControlName="amountsOriginal"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('amountsOriginal')?.invalid && (transactionInfoForm.get('amountsOriginal')?.dirty || transactionInfoForm.get('amountsOriginal')?.touched)" class="error-message">
+        Amounts, Original is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="retrievalReferenceNumber">Retrieval Reference Number:</label>
+      <input
+        type="text"
+        id="retrievalReferenceNumber"
+        formControlName="retrievalReferenceNumber"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('retrievalReferenceNumber')?.invalid && (transactionInfoForm.get('retrievalReferenceNumber')?.dirty || transactionInfoForm.get('retrievalReferenceNumber')?.touched)" class="error-message">
+        Retrieval Reference Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="approvalCode">Approval Code:</label>
+      <input
+        type="text"
+        id="approvalCode"
+        formControlName="approvalCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('approvalCode')?.invalid && (transactionInfoForm.get('approvalCode')?.dirty || transactionInfoForm.get('approvalCode')?.touched)" class="error-message">
+        Approval Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="serviceCode">Service Code:</label>
+      <input
+        type="text"
+        id="serviceCode"
+        formControlName="serviceCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('serviceCode')?.invalid && (transactionInfoForm.get('serviceCode')?.dirty || transactionInfoForm.get('serviceCode')?.touched)" class="error-message">
+        Service Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="acceptorTerminalId">Acceptor Terminal ID:</label>
+      <input
+        type="text"
+        id="acceptorTerminalId"
+        formControlName="acceptorTerminalId"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('acceptorTerminalId')?.invalid && (transactionInfoForm.get('acceptorTerminalId')?.dirty || transactionInfoForm.get('acceptorTerminalId')?.touched)" class="error-message">
+        Acceptor Terminal ID is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="acceptorIdCode">Acceptor ID Code:</label>
+      <input
+        type="text"
+        id="acceptorIdCode"
+        formControlName="acceptorIdCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('acceptorIdCode')?.invalid && (transactionInfoForm.get('acceptorIdCode')?.dirty || transactionInfoForm.get('acceptorIdCode')?.touched)" class="error-message">
+        Acceptor ID Code is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="acceptorNameLocation">Acceptor Name/Location:</label>
+      <input
+        type="text"
+        id="acceptorNameLocation"
+        formControlName="acceptorNameLocation"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('acceptorNameLocation')?.invalid && (transactionInfoForm.get('acceptorNameLocation')?.dirty || transactionInfoForm.get('acceptorNameLocation')?.touched)" class="error-message">
+        Acceptor Name/Location is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="currencyCodeTransaction">Currency Code, Transaction:</label>
+      <input
+        type="text"
+        id="currencyCodeTransaction"
+        formControlName="currencyCodeTransaction"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('currencyCodeTransaction')?.invalid && (transactionInfoForm.get('currencyCodeTransaction')?.dirty || transactionInfoForm.get('currencyCodeTransaction')?.touched)" class="error-message">
+        Currency Code, Transaction is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="iccSystemRelatedData">Integrated Circuit Card (ICC) System Related Data:</label>
+      <textarea
+        id="iccSystemRelatedData"
+        formControlName="iccSystemRelatedData"
+      ></textarea>
+      <div *ngIf="transactionInfoForm.get('iccSystemRelatedData')?.invalid && (transactionInfoForm.get('iccSystemRelatedData')?.dirty || transactionInfoForm.get('iccSystemRelatedData')?.touched)" class="error-message">
+        ICC System Related Data is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionLifeCycleId">Transaction Life Cycle ID:</label>
+      <input
+        type="text"
+        id="transactionLifeCycleId"
+        formControlName="transactionLifeCycleId"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('transactionLifeCycleId')?.invalid && (transactionInfoForm.get('transactionLifeCycleId')?.dirty || transactionInfoForm.get('transactionLifeCycleId')?.touched)" class="error-message">
+        Transaction Life Cycle ID is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="messageNumber">Message Number:</label>
+      <input
+        type="text"
+        id="messageNumber"
+        formControlName="messageNumber"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('messageNumber')?.invalid && (transactionInfoForm.get('messageNumber')?.dirty || transactionInfoForm.get('messageNumber')?.touched)" class="error-message">
+        Message Number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="transactionDestinationInstitutionIdCode">Transaction Destination Institution ID Code:</label>
+      <input
+        type="text"
+        id="transactionDestinationInstitutionIdCode"
+        formControlName="transactionDestinationInstitutionIdCode"
+        required
+      >
+      <div *ngIf="transactionInfoForm.get('transactionDestinationInstitutionIdCode')?.invalid && (transactionInfoForm.get('transactionDestinationInstitutionIdCode')?.dirty || transactionInfoForm.get('transactionDestinationInstitutionIdCode')?.touched)" class="error-message">
+        Transaction Destination Institution ID Code is required.
+      </div>
+    </div>
+
+    <button (click)="testClick()">Next</button>
+  </form>
+</div>
