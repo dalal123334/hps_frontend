@@ -1,7 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { NgForOf, NgIf } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {NgForOf, NgIf} from '@angular/common';
+import {BackendService} from "../service/backend.service";
+import {AcceptorInfo} from "../entities/AcceptorInfo";
+import {HttpClientModule} from "@angular/common/http";
+import {ReconciliationInfo} from "../entities/ReconciliationInfo";
 
 @Component({
   selector: 'app-multi-step-form',
@@ -11,15 +15,18 @@ import { NgForOf, NgIf } from '@angular/common';
   imports: [
     ReactiveFormsModule,
     NgIf,
-    NgForOf
-  ]
+    NgForOf,
+    HttpClientModule,
+  ],
+  providers: [BackendService, HttpClientModule]
 })
 export class MultiStepFormComponent implements OnInit {
   transactionForm1!: FormGroup;
   transactionForm2!: FormGroup;
   cities: string[] = ['New York', 'Los Angeles', 'Chicago'];
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private fb: FormBuilder, private router: Router, private backendService: BackendService) {
+  }
 
   ngOnInit() {
     this.transactionForm1 = this.fb.group({
@@ -39,20 +46,24 @@ export class MultiStepFormComponent implements OnInit {
     });
   }
 
-  onSubmit1() {
-    if (this.transactionForm1.valid) {
-      this.router.navigate(['/account-institution-info']);
+  submit() {
+    if (this.transactionForm1.valid && this.transactionForm2.valid) {
+      let acceptorInfo: AcceptorInfo = this.transactionForm1.value;
+      let reconciliationInfo = this.transactionForm2.value;
+      console.log(acceptorInfo)
+      console.log(reconciliationInfo)
+      this.backendService.createAcceptorInfo(acceptorInfo).subscribe((data1: AcceptorInfo) => {
+        this.backendService.createReconciliationInfo(reconciliationInfo).subscribe((data2: ReconciliationInfo) => {
+          if (data1 && data2) {
+            this.router.navigate(['/account-institution-info']).then(r => console.log(r));
+          } else {
+            alert("error")
+          }
+        });
+      });
+    } else {
+      alert("missing fields")
     }
-  }
 
-  onSubmit2() {
-    if (this.transactionForm2.valid) {
-      this.router.navigate(['/account-institution-info']);
-    }
-  }
-
-  testClick() {
-    console.log('Button clicked');
-    this.router.navigate(['/account-institution-info']);
   }
 }
