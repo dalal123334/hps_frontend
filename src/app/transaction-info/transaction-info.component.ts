@@ -68,6 +68,15 @@ export class TransactionInfoComponent implements OnInit {
         formValue.expirationDate = new Date(expirationDate)
       }
 
+      this.backService.createTransactionInfo(formValue).subscribe({
+        next: (data) => {
+          this.router.navigate(['/additional-data']).then(r => console.log('Navigated to Additional Data'));
+        },
+        error: (error) => {
+          alert('Error creating Transaction Info from the server');
+        }
+      })
+
       console.log('Form Submitted', formValue);
     } else {
       alert('Please fill all required fields');

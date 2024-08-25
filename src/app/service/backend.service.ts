@@ -43,9 +43,9 @@ export class BackendService {
     return this.httpClient.post<CurrencyConversionInfo>(`${this.baseUrl}/transactions/merchant-info`, currencyConversionInfo);
   }
 
-  // createTransactionInfo(transactionInfo: TransactionInfo): Observable<TransactionInfo> {
-  //   return this.httpClient.post<TransactionInfo>(`${this.baseUrl}/transactions/transaction-info`, transactionInfo);
-  // }
+  createTransactionInfo(transactionInfo: TransactionInfo): Observable<TransactionInfo> {
+    return this.httpClient.post<TransactionInfo>(`${this.baseUrl}/transaction-info`, transactionInfo);
+  }
 
 
   createAdditionalData(additionalData: AdditionalData): Observable<AdditionalData> {
