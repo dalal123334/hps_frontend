@@ -1,7 +1,10 @@
-import { DatePipe, NgIf } from '@angular/common';
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
-import { Router } from '@angular/router';
+import {DatePipe, NgIf} from '@angular/common';
+import {Component, OnInit} from "@angular/core";
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {Router} from '@angular/router';
+import {TransactionInfo} from "../entities/TransactionInfo";
+import {BackendService} from "../service/backend.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-transaction-info',
@@ -9,10 +12,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./transaction-info.component.css'],
   standalone: true,
   imports: [
+    HttpClientModule,
     ReactiveFormsModule,
     NgIf
   ],
-  providers: [DatePipe]
+  providers: [DatePipe, BackendService]
 })
 export class TransactionInfoComponent implements OnInit {
   transactionInfoForm!: FormGroup;
@@ -20,8 +24,10 @@ export class TransactionInfoComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private datePipe: DatePipe,
-    private router: Router // Inject Router here
-  ) { }
+    private router: Router, // Inject Router here
+    private backService: BackendService
+  ) {
+  }
 
   ngOnInit(): void {
     this.transactionInfoForm = this.fb.group({
@@ -49,20 +55,22 @@ export class TransactionInfoComponent implements OnInit {
     });
   }
 
-  onSubmitTransactionInfo(): void {
+  submit() {
     if (this.transactionInfoForm.valid) {
       // Convert date fields to string format
-      const formValue = this.transactionInfoForm.value;
-      formValue.localTransactionDateTime = this.datePipe.transform(formValue.localTransactionDateTime, 'yyyy-MM-ddTHH:mm:ss');
-      formValue.expirationDate = this.datePipe.transform(formValue.expirationDate, 'yyyy-MM-dd');
+      let formValue: TransactionInfo = this.transactionInfoForm.value;
+      let localTransactionDateTime = this.datePipe.transform(formValue.localTransactionDateTime, 'yyyy-MM-ddTHH:mm:ss');
+      if (localTransactionDateTime !== null) {
+        formValue.localTransactionDateTime = new Date(localTransactionDateTime)
+      }
+      let expirationDate = this.datePipe.transform(formValue.expirationDate, 'yyyy-MM-dd');
+      if (expirationDate !== null) {
+        formValue.expirationDate = new Date(expirationDate)
+      }
 
-      // Handle form submission
       console.log('Form Submitted', formValue);
+    } else {
+      alert('Please fill all required fields');
     }
-  }
-
-  testClick() {
-    console.log('Button clicked');
-    this.router.navigate(['/additional-data']);
   }
 }

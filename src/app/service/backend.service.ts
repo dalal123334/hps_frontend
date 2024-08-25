@@ -5,6 +5,8 @@ import {AcceptorInfo} from "../entities/AcceptorInfo";
 import {ReconciliationInfo} from "../entities/ReconciliationInfo";
 import {AccountInstitutionInfo} from "../entities/AccountInstitutionInfo";
 import {CurrencyConversionInfo} from "../entities/CurrencyConversionInfo";
+import {TransactionInfo} from "../entities/TransactionInfo";
+import {AdditionalData} from "../entities/AdditionalData";
 
 @Injectable({
   providedIn: 'root',
@@ -40,4 +42,15 @@ export class BackendService {
   createCurrencyConversionInfo(currencyConversionInfo: CurrencyConversionInfo): Observable<CurrencyConversionInfo> {
     return this.httpClient.post<CurrencyConversionInfo>(`${this.baseUrl}/transactions/merchant-info`, currencyConversionInfo);
   }
+
+  // createTransactionInfo(transactionInfo: TransactionInfo): Observable<TransactionInfo> {
+  //   return this.httpClient.post<TransactionInfo>(`${this.baseUrl}/transactions/transaction-info`, transactionInfo);
+  // }
+
+
+  createAdditionalData(additionalData: AdditionalData): Observable<AdditionalData> {
+    return this.httpClient.post<AdditionalData>(`${this.baseUrl}/additional-data`, additionalData);
+  }
+
+
 }
