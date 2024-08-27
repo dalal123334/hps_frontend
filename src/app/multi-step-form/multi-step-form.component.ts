@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {NgForOf, NgIf} from '@angular/common';
-import {BackendService} from "../service/backend.service";
+import {BackendService} from "../service/forms-back/backend.service";
 import {AcceptorInfo} from "../entities/AcceptorInfo";
 import {HttpClientModule} from "@angular/common/http";
 import {ReconciliationInfo} from "../entities/ReconciliationInfo";

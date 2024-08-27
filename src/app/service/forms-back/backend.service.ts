@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {AcceptorInfo} from "../entities/AcceptorInfo";
-import {ReconciliationInfo} from "../entities/ReconciliationInfo";
-import {AccountInstitutionInfo} from "../entities/AccountInstitutionInfo";
-import {CurrencyConversionInfo} from "../entities/CurrencyConversionInfo";
-import {TransactionInfo} from "../entities/TransactionInfo";
-import {AdditionalData} from "../entities/AdditionalData";
+import {AcceptorInfo} from "../../entities/AcceptorInfo";
+import {ReconciliationInfo} from "../../entities/ReconciliationInfo";
+import {AccountInstitutionInfo} from "../../entities/AccountInstitutionInfo";
+import {CurrencyConversionInfo} from "../../entities/CurrencyConversionInfo";
+import {TransactionInfo} from "../../entities/TransactionInfo";
+import {AdditionalData} from "../../entities/AdditionalData";
 
 @Injectable({
   providedIn: 'root',

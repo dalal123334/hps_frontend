@@ -3,7 +3,7 @@ import {Component, OnInit} from "@angular/core";
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {Router} from '@angular/router';
 import {TransactionInfo} from "../entities/TransactionInfo";
-import {BackendService} from "../service/backend.service";
+import {BackendService} from "../service/forms-back/backend.service";
 import {HttpClientModule} from "@angular/common/http";
 
 @Component({

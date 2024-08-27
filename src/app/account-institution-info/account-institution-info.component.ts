@@ -4,7 +4,7 @@ import {NgIf} from '@angular/common';
 import {Router} from '@angular/router';
 import {AccountInstitutionInfo} from "../entities/AccountInstitutionInfo";
 import {CurrencyConversionInfo} from "../entities/CurrencyConversionInfo";
-import {BackendService} from "../service/backend.service";
+import {BackendService} from "../service/forms-back/backend.service";
 import {HttpClientModule} from "@angular/common/http";
 
 @Component({

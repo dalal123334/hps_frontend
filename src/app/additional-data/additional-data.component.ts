@@ -4,7 +4,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {NgIf} from "@angular/common";
 import {AdditionalData} from "../entities/AdditionalData";
 import {HttpClientModule} from "@angular/common/http";
-import {BackendService} from "../service/backend.service";
+import {BackendService} from "../service/forms-back/backend.service";
 import {Router} from "@angular/router";
 
 @Component({
