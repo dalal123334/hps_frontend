@@ -1,5 +1,5 @@
-.container{
-  width:100%;
+.container {
+  width: 100%;
   /*height: 100vh;*/
   /*overflow: hidden;*/
   box-sizing: border-box;
@@ -18,7 +18,7 @@
   object-position: center;
 }
 
-.pre-container{
+.pre-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,6 +36,7 @@
   max-width: 1200px; /* Same max-width for both components */
   margin-left: auto; /* Center the components horizontally */
   margin-right: auto; /* Center the components horizontally */
+  cursor: pointer;
 }
 
 .transaction-section h1, .report-section h1 {

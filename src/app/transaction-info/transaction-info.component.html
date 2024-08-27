@@ -1,7 +1,7 @@
 <!-- Transaction Info Form -->
 <div class="form-container">
   <h2>Transaction Information</h2>
-  <form [formGroup]="transactionInfoForm" (ngSubmit)="onSubmitTransactionInfo()">
+  <form [formGroup]="transactionInfoForm">
 
     <div class="form-group">
       <label for="primaryAccountNumber">Primary Account Number (PAN):</label>
@@ -273,6 +273,6 @@
       </div>
     </div>
 
-    <button (click)="testClick()">Next</button>
+    <button (click)="submit()">Next</button>
   </form>
 </div>

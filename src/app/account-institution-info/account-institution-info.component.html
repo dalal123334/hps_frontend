@@ -37,7 +37,7 @@
     <div class="form-group">
       <label for="conversionRateReconciliation">Conversion Rate Reconciliation:</label>
       <input
-        type="text"
+        type="number"
         id="conversionRateReconciliation"
         formControlName="conversionRateReconciliation"
         required
@@ -50,7 +50,7 @@
     <div class="form-group">
       <label for="conversionRateCardholderBilling">Conversion Rate Cardholder Billing:</label>
       <input
-        type="text"
+        type="number"
         id="conversionRateCardholderBilling"
         formControlName="conversionRateCardholderBilling"
         required
@@ -89,7 +89,7 @@
     <div class="form-group">
       <label for="amountCardholderBillingUSD">Amount Cardholder Billing (USD):</label>
       <input
-        type="text"
+        type="number"
         id="amountCardholderBillingUSD"
         formControlName="amountCardholderBillingUSD"
         required
@@ -102,7 +102,7 @@
     <div class="form-group">
       <label for="amountCurrencyConversionAssessmentUSD">Amount Currency Conversion Assessment (USD):</label>
       <input
-        type="text"
+        type="number"
         id="amountCurrencyConversionAssessmentUSD"
         formControlName="amountCurrencyConversionAssessmentUSD"
         required
@@ -112,6 +112,6 @@
       </div>
     </div>
 
-    <button (click)="testClick()">Next</button>
+    <button (click)="submit()">Next</button>
   </form>
 </div>

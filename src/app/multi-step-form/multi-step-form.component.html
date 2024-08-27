@@ -1,6 +1,6 @@
 <div class="form-container">
   <!-- Premier Formulaire -->
-  <form [formGroup]="transactionForm1" (ngSubmit)="onSubmit1()">
+  <form [formGroup]="transactionForm1">
     <h2 class="form-title">Acceptor Information </h2>
 
     <div>
@@ -60,12 +60,12 @@
 
 <!-- Second Formulaire -->
 <div class="form-container">
-  <form [formGroup]="transactionForm2" (ngSubmit)="onSubmit2()">
+  <form [formGroup]="transactionForm2">
     <h2 class="form-title">Reconciliation Information</h2>
 
     <div>
       <label for="amountReconciliation">Amount Reconciliation</label>
-      <input id="amountReconciliation" type="text" formControlName="amountReconciliation" required>
+      <input id="amountReconciliation" type="number" formControlName="amountReconciliation" required>
       <div *ngIf="transactionForm2.get('amountReconciliation')?.invalid && transactionForm2.get('amountReconciliation')?.touched" class="error-message">
         Ce champ est requis.
       </div>
@@ -81,7 +81,7 @@
 
     <div>
       <label for="amountsAdditional">Additional Amounts</label>
-      <input id="amountsAdditional" type="text" formControlName="amountsAdditional" required>
+      <input id="amountsAdditional" type="number" formControlName="amountsAdditional" required>
       <div *ngIf="transactionForm2.get('amountsAdditional')?.invalid && transactionForm2.get('amountsAdditional')?.touched" class="error-message">
         Ce champ est requis.
       </div>
@@ -95,7 +95,7 @@
       </div>
     </div>
 
-    <button (click)="testClick()">Next</button>
+    <button (click)="submit()">Next</button>
 
   </form>
 </div>

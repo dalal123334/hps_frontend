@@ -1,11 +1,15 @@
-<div class="report-section">
-  <h1>Transaction & Report</h1>
-  <h2>Explorez et générez votre rapport</h2>
-  <div class="icon-container">
-    <img src="assets/calendrier.png" alt="Icône de rapport" class="icon-plus"
-
-    >
+<div class="container">
+  <button (click)="returnHome()" class="abs">
+    <img src="/assets/home.png" alt="home">
+  </button>
+  <div class="content">
+    @if(fileContent){
+      <p class="text">{{ fileContent }}</p>
+    } @else {
+      <p class="text">No data to display</p>
+    }
   </div>
-
-
+  @if(fileContent){
+    <button (click)="download()">Download IPM File</button>
+  }
 </div>

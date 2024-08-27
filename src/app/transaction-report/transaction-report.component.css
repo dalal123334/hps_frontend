@@ -1,48 +1,116 @@
-body, html {
-  margin: 0;
+/*.app-container {*/
+/*  text-align: center;*/
+/*  padding: 20px;*/
+/*}*/
+
+/*.logo {*/
+/*  width: 150px;*/
+/*  margin-bottom: 30px;*/
+/*}*/
+
+/*.transaction-section, .report-section {*/
+/*  margin: 30px 0; !* Même marge pour les deux composants *!*/
+/*  padding: 70px; !* Même padding pour les deux composants *!*/
+/*  border: 1px solid rgb(241, 235, 231);*/
+/*  border-radius: 8px;*/
+/*  background-color: #e87020;*/
+/*  width: 80%; !* Même largeur pour les deux composants *!*/
+/*  max-width: 1200px; !* Même largeur maximale pour les deux composants *!*/
+/*  margin-left: auto; !* Centrer les composants horizontalement *!*/
+/*  margin-right: auto; !* Centrer les composants horizontalement *!*/
+/*}*/
+
+/*.transaction-section h1, .report-section h1 {*/
+/*  font-size: 20px; !* Taille de police pour les titres *!*/
+/*  margin-bottom: 10px; !* Espace entre le titre et le sous-titre *!*/
+/*}*/
+
+/*.transaction-section h2, .report-section h2 {*/
+/*  font-size: 20px; !* Taille de police pour les sous-titres *!*/
+/*  color: #f6f1f1;*/
+/*  margin-bottom: 20px; !* Espace entre le sous-titre et l'icône *!*/
+/*}*/
+
+/*.icon-container {*/
+/*  text-align: center; !* Centrer l'icône horizontalement *!*/
+/*}*/
+
+/*.icon-plus {*/
+/*  width: 50px; !* Taille de l'icône *!*/
+/*  display: inline-block; !* Assurer le centrage dans le conteneur *!*/
+/*}*/
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.abs {
+  position: absolute;
+  width:50px;
+  height:50px;
+  top: 5%;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: white;
 }
 
-.app-container {
-  text-align: center;
-  padding: 20px;
+.abs img {
+  width: 50%;
+  height: auto;
+  object-fit: fill;
+  object-position: center;
+  aspect-ratio: 1/1;
 }
 
-.logo {
-  width: 150px;
-  margin-bottom: 30px;
+button {
+  color: white;
+  background: #e87020;
+  font-family: Lato;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all .2s linear;
+  border: 1px solid #e87020;
+  z-index: 2;
 }
 
-.transaction-section, .report-section {
-  margin: 30px 0; /* Même marge pour les deux composants */
-  padding: 70px; /* Même padding pour les deux composants */
-  border: 1px solid rgb(241, 235, 231);
-  border-radius: 8px;
-  background-color: #e87020;
-  width: 80%; /* Même largeur pour les deux composants */
-  max-width: 1200px; /* Même largeur maximale pour les deux composants */
-  margin-left: auto; /* Centrer les composants horizontalement */
-  margin-right: auto; /* Centrer les composants horizontalement */
+button:hover {
+  color: #e87020;
+  background: white;
+  border: 1px solid #e87020;
 }
 
-.transaction-section h1, .report-section h1 {
-  font-size: 20px; /* Taille de police pour les titres */
-  margin-bottom: 10px; /* Espace entre le titre et le sous-titre */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width : 50%;
+  height: 65%;
+  background-color: #2d2d2d; /* Dark background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding around the text */
+  box-shadow: 1px -1px 30px 1px rgba(0,0,0,0.65);
+  -webkit-box-shadow: 1px -1px 30px 1px rgba(0,0,0,0.65);
+  -moz-box-shadow: 1px -1px 30px 1px rgba(0,0,0,0.65);
 }
 
-.transaction-section h2, .report-section h2 {
-  font-size: 20px; /* Taille de police pour les sous-titres */
-  color: #f6f1f1;
-  margin-bottom: 20px; /* Espace entre le sous-titre et l'icône */
-}
-
-.icon-container {
-  text-align: center; /* Centrer l'icône horizontalement */
-}
-
-.icon-plus {
-  width: 50px; /* Taille de l'icône */
-  display: inline-block; /* Assurer le centrage dans le conteneur */
+.text {
+  color: #ffffff; /* White text color */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  font-size: 18px; /* Font size */
+  line-height: 1.5; /* Line height for better readability */
+  word-wrap: break-word; /* Break long words */
+  text-align: left; /* Left-align text */
+  white-space: pre-wrap; /* Preserve line breaks */
 }
